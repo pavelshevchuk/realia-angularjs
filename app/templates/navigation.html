@@ -1,0 +1,41 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-class="{'autoheight': !navCollapsed}">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Realia</a>
+        </div>
+        <div class="collapse navbar-collapse" collapse="navCollapsed">
+            <ul class="nav navbar-nav">
+                <li ui-sref-active="active" class="visible-xs"><a ui-sref="home" ng-click="navCollapsed = true">Latest Properties</a></li>
+                <li dropdown><a href="#" dropdown-toggle>For Sale <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Apartment</a></li>
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Building Area</a></li>
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Condo</a></li>
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Cottage</a></li>
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Family House</a></li>
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Single Home</a></li>
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Villa</a></li>
+                    </ul>
+                </li>
+                <li dropdown><a href="#" dropdown-toggle>For Rent <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Apartment</a></li>
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Building Area</a></li>
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Condo</a></li>
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Cottage</a></li>
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Family House</a></li>
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Single Home</a></li>
+                        <li><a ui-sref="home" ng-click="navCollapsed = true">Villa</a></li>
+                    </ul>
+                </li>
+                <li><a ui-sref="home" ng-click="navCollapsed = true">About us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

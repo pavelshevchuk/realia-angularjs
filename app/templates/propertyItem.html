@@ -1,0 +1,177 @@
+<h2>{{property.title}} <sup><small><span ng-show="{{property.is_new}}" class="label label-success">New</span><span ng-show="{{property.is_hot}}" class="label label-warning">Hot</span></small></sup></h2>
+<div class="row">
+    <div class="col-md-8 property-carousel">
+        <div class="carousel">
+            <div class="outer">
+                <ul rn-carousel class="image inner" rn-carousel-controls="true" rn-carousel-easing="easeInOutSine" rn-carousel-index="carouselIndex" rn-carousel-buffered rn-carousel-auto-slide="5">
+                    <li ng-repeat="image in property.images">
+                        <div ng-style="{'background-image': 'url(' + image + ')'}" class="layer"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center" rn-carousel-indicators ng-if="property.images.length > 1" slides="property.images" rn-carousel-index="carouselIndex"></div>
+    </div>
+
+    <div class="col-md-4">
+        <h3>Overview</h3>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4"><strong>ID:</strong></div>
+                    <div class="col-xs-8"><strong>#{{property.id}}</strong></div>
+
+                    <div class="col-xs-4"><strong>Price:</strong></div>
+                    <div class="col-xs-8">{{property.price | currency: "": 0}} &euro;</div>
+
+                    <div class="col-xs-4"><strong>Type:</strong></div>
+                    <div class="col-xs-8">{{property.property_type}}</div>
+
+                    <div class="col-xs-4"><strong>Contract:</strong></div>
+                    <div class="col-xs-8">{{property.contract_type}}</div>
+
+                    <div class="col-xs-4"><strong>District:</strong></div>
+                    <div class="col-xs-8">{{property.district}}</div>
+
+                    <div class="col-xs-4"><strong>Location:</strong></div>
+                    <div class="col-xs-8">{{property.location}}</div>
+
+                    <div class="col-xs-4"><strong>Bathrooms:</strong></div>
+                    <div class="col-xs-8">{{property.bathrooms}}</div>
+
+                    <div class="col-xs-4"><strong>Bedrooms:</strong></div>
+                    <div class="col-xs-8">{{property.bedrooms}}</div>
+
+                    <div class="col-xs-4"><strong>Area:</strong></div>
+                    <div class="col-xs-8">{{property.area}}m<sup>2</sup></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <p ng-bind-html="property.notes"></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8 property-amenities">
+        <h3>General Amenities</h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <ul class="list-unstyled">
+                            <li class="text-success"><span class="glyphicon glyphicon-ok"></span> Air conditioning</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Balcony</li>
+                            <li class="text-success"><span class="glyphicon glyphicon-ok"></span> Bedding</li>
+                            <li class="text-success"><span class="glyphicon glyphicon-ok"></span> Cable TV</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Cleaning after exit</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Cofee pot</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Computer</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Cot</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="list-unstyled">
+                            <li><span class="glyphicon glyphicon-remove"></span> Dishwasherv</li>
+                            <li class="text-success"><span class="glyphicon glyphicon-ok"></span> DVD</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Fan</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Fridge</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Grill</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Hairdryer</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Heating</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Hi-fi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <ul class="list-unstyled">
+                            <li class="text-success"><span class="glyphicon glyphicon-ok"></span> Internet</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Iron</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Juicer</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Lift</li>
+                            <li class="text-success"><span class="glyphicon glyphicon-ok"></span> Microwave</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Oven</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Parking</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Parquet</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="list-unstyled">
+                            <li class="text-success"><span class="glyphicon glyphicon-ok"></span> Radio</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Roof terrace</li>
+                            <li class="text-success"><span class="glyphicon glyphicon-ok"></span> Smoking allowed</li>
+                            <li class="text-success"><span class="glyphicon glyphicon-ok"></span> Terrace</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Toaster</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Towelwes</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Use of pool</li>
+                            <li><span class="glyphicon glyphicon-remove"></span> Video</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Map</h3>
+        <div class="property-map" ng-controller="myGoogleMap">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom' options="map.options">
+                <ui-gmap-marker coords="map.marker" idkey="0">
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h3>Agent</h3>
+        <div class="row property-agent">
+            <div class="col-xs-4">
+                <img class="img-rounded" src="/assets/images/agent.jpg"/>
+            </div>
+            <div class="col-xs-8">
+                <h4>John Smith</h4>
+                <p><span class="glyphicon glyphicon-earphone"></span>&nbsp;&nbsp;<a href="tel:+380962509009">+38 (096) 250 90 09</a></p>
+                <p><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;<a href="mailto:john.smith@realia.com">john.smith@realia.com</a></p>
+            </div>
+        </div>
+        <!--<h3>Contact Agent</h3>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form>
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="inputName" class="control-label">Your Name</label>
+                            <div class="">
+                                <input type="text" class="form-control" id="inputName" placeholder="John">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="control-label">Your Email</label>
+                            <div class="">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="john@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="textArea" class="control-label">Message</label>
+                            <div class="">
+                                <textarea class="form-control" rows="3" id="textArea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="text-right">
+                                <button type="reset" class="btn btn-default">Cancel</button>&nbsp;&nbsp;
+                                <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;Send</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>-->
+    </div>
+</div>

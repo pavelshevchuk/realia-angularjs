@@ -1,0 +1,143 @@
+body {
+  padding: 70px 0 80px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.navbar.autoheight {
+  height: 100%;
+}
+
+.navbar.autoheight .navbar-collapse.in {
+  overflow: hidden;
+}
+
+.navbar.autoheight .navbar-collapse {
+  max-height: 100%;
+}
+
+div.property-image {
+  position: relative;
+}
+
+div.property-image img {
+  display: block;
+}
+
+div.property-image .property-icon {
+  position: absolute;
+  margin: 0;
+}
+
+div.property-image .property-icon.top {
+  top: 10px;
+}
+
+div.property-image .property-icon.left {
+  left: 10px;
+}
+
+div.property-image .property-icon.bottom {
+  bottom: 10px;
+}
+
+div.property-image .property-icon.right {
+  right: 10px;
+}
+
+div.property-image .property-icon .label {
+  display: block;
+}
+
+/* Carousel */
+.carousel {
+  width: 100%; /* pick whatever width you want */
+}
+.carousel .outer {
+  width: 100%;
+  padding-top: 49.7%; /* defines aspect ratio */
+  position: relative;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+.carousel .outer .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.carousel .outer .inner .layer {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.property-carousel {
+  margin-bottom: 20px;
+}
+
+.angular-google-map-container {
+  height: 300px;
+}
+
+.property-amenities ul.list-unstyled {
+  margin: 0;
+}
+
+.property-agent {
+  margin-bottom: 30px;
+}
+
+.property-agent img {
+  max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .property-carousel {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .property-map {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 20px;
+  }
+}
+
+/* Property thumbnail */
+.property-thumbnail {
+  width: 100%; /* pick whatever width you want */
+}
+
+.property-thumbnail img {
+  max-width:100%;
+  width:100%;
+}
+
+.property-thumbnail .outer {
+  width: 100%;
+  padding-top: 74.3%; /* defines aspect ratio */
+  position: relative;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+.property-thumbnail .outer .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

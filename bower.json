@@ -1,0 +1,29 @@
+{
+  "name": "Realia",
+  "version": "0.0.1",
+  "authors": [
+    "Pavlo Shevchuk"
+  ],
+  "homepage": "http://google.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "latest",
+    "bootstrap": "latest",
+    "angular-bootstrap": "latest",
+    "angular-mocks": "latest",
+    "angular-sanitize": "latest",
+    "angular-ui-router": "latest",
+    "angular-resource": "latest",
+    "angular-touch": "latest",
+    "angular-carousel": "latest",
+    "angular-google-maps": "latest",
+    "ngInfiniteScroll": "latest",
+    "ngCordova": "latest"
+  }
+}

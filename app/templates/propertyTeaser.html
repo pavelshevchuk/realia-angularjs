@@ -1,0 +1,26 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="property-image">
+            <div class="property-thumbnail">
+                <div class="outer">
+                    <div class="inner">
+                        <a ui-sref="property({itemId: property.id})"><img class="img-rounded" ng-src="{{property.thumbnail}}" /></a>
+                    </div>
+                </div>
+            </div>
+            <div ng-show="{{property.is_new}}" class="property-icon top right h3"><span class="label label-success">New</span></div>
+            <div ng-show="{{property.is_hot}}" class="property-icon top right h3"><span class="label label-warning">Hot</span></div>
+            <div class="property-icon bottom left h3"><span class="label label-default">{{property.contract_type}}</span></div>
+            <div class="property-icon bottom right h3"><span class="label label-default">{{property.price | currency: "": 0}} &euro;</span></div>
+        </div>
+        <h3><a class="text-left" ui-sref="property({itemId: property.id})">{{property.title}}</a><br/><small>{{property.district}}</small></h3>
+        <div class="row">
+            <div class="col-xs-6">
+                <strong>Area:</strong> {{property.area}}m<sup>2</sup>
+            </div>
+            <div ng-show="{{property.bedrooms}}" class="col-xs-6 text-right">
+                <span class="glyphicon glyphicon-bed"></span>&nbsp;{{property.bedrooms}}
+            </div>
+        </div>
+    </div>
+</div>

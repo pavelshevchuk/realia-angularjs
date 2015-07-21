@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Realia</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/bower_components/angular/angular-csp.css"/>
+    <link rel="stylesheet" type="text/css" href="/bower_components/angular-carousel/dist/angular-carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="/build/app.css"/>
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="/bower_components/angular-touch/angular-touch.js"></script>
+    <script src="/bower_components/angular-carousel/dist/angular-carousel.js"></script>
+    <script src="/bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+    <script src="/bower_components/ngCordova/dist/ng-cordova.js"></script>
+
+    <script src="cordova.js"></script>
+
+    <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="/bower_components/lodash/lodash.js"></script>
+    <script src="/bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+
+    <script src="/build/realia.js"></script>
+</head>
+<body loading-status>
+
+<app-navigation></app-navigation>
+
+<div class="container">
+    <div class="loading-message">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <div ui-view class="loading-content" autoscroll="true"></div>
+</div>
+
+<app-footer></app-footer>
+
+</body>
+</html>

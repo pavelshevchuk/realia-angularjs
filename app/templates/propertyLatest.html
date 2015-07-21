@@ -1,0 +1,10 @@
+<h2>Latest Properties</h2>
+<div class="row" infinite-scroll="propertiesPagingLoad()" infinite-scroll-distance="0">
+    <div ng-repeat="property in properties track by $index">
+        <div class="col-md-3 col-sm-6">
+            <app-property-teaser property="property"></app-property-teaser>
+        </div>
+        <div ng-if="($index + 1) % 2 == 0" class="clearfix visible-sm"></div>
+        <div ng-if="($index + 1) % 4 == 0" class="clearfix"></div>
+    </div>
+</div>
